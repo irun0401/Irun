@@ -11,9 +11,6 @@ class TutorialFlutter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // routes: {
-      //   "screen2": (context) => Screen2(),
-      // },
       home: WillPopScope(
         onWillPop: () => showExitPopup(context),
         child: Scaffold(

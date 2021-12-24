@@ -31,7 +31,6 @@ class UrlLauncherPage extends StatelessWidget {
                   await SMS("+62082221422111");
                 },
               ),
-
               WidgetLauncher(
                 "email,",
                 () async {
@@ -66,8 +65,6 @@ class UrlLauncherPage extends StatelessWidget {
                       forceWebView: true, enableJavaScript: true);
                 },
               ),
-              // WidgetLauncher(),
-              // WidgetLauncher(),
             ],
           ),
         ),
