@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:irun/widgets/exit_popup.dart';
 import 'package:url_launcher/url_launcher.dart';
-// import 'package:url_launcher/url_launcher.dart';
 
 class Screen4 extends StatelessWidget {
   @override
@@ -30,7 +29,6 @@ class Screen4 extends StatelessWidget {
         body: GridView.count(
           padding: EdgeInsets.all(10),
           crossAxisCount: 2,
-          // childAspectRatio: 8,
           children: [
             animeFavorit(
               urlAnime:
@@ -86,7 +84,6 @@ class animeFavorit extends StatelessWidget {
       onTap: () async {
         openBrowser(url: urlAnime, forceWebView: false, enableJavaScript: true);
       },
-      // OpenLink(),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: ClipRRect(
@@ -113,23 +110,3 @@ Future openBrowser(
     launch(url, forceWebView: forceWebView, enableJavaScript: enableJavaScript);
   }
 }
-
-// void _launchURL(_url) async {
-//   if (!await launch(_url)) throw 'Could not launch $_url';
-// }
-//untuk membuka link saat tap
-// OpenLink(url) async {
-//   if (await canLaunch(url)) {
-//     await launch(url, forceWebView: true, enableJavaScript: true);
-//   } else {
-//     throw "Could Not Launch Url $url";
-//   }
-// }
-
-// Future<void> OpenBrowser(String url,
-//     {bool forceWebView = false, bool enableJavaScript = false}) async {
-//   if (await canLaunch(url)) {
-//     await launch(url,
-//         forceWebView: forceWebView, enableJavaScript: enableJavaScript);
-//   }
-// }
