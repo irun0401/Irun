@@ -82,7 +82,7 @@ class animeFavorit extends StatelessWidget {
     return InkWell(
       splashColor: Colors.pink,
       onTap: () async {
-        openBrowser(url: urlAnime, forceWebView: false, enableJavaScript: true);
+        openBrowser(url: urlAnime, forceWebView: true, enableJavaScript: true);
       },
       child: Padding(
         padding: const EdgeInsets.all(8.0),

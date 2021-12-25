@@ -14,6 +14,9 @@ class UrlLauncherPage extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text("Url Launcher"),
+          actions: [
+            IconButton(onPressed: () {}, icon: Icon(Icons.access_alarm))
+          ],
         ),
         body: Center(
           child: Column(

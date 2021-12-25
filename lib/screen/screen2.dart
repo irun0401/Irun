@@ -22,7 +22,7 @@ class Screen2 extends StatelessWidget {
                       forceWebView: true,
                       enableJavaScript: true);
                 },
-                icon: Icon(Icons.ac_unit_rounded))
+                icon: Icon(Icons.access_time))
           ],
           title: Text('My Favorite Anime & Donghua'),
           centerTitle: true,

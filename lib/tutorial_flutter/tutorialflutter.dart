@@ -10,20 +10,29 @@ class TutorialFlutter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.teal,
-          title: Text("TUTORIAL FLUTTER"),
-        ),
-        body: ListView(
-          children: [
-            MateriBelajar(
-                judul: "Belajar Fluter Dasar", layar: UrlLauncherPage()),
-            MateriBelajar(
-                judul: "Url Launcher (link, sms, telp,email",
-                layar: UrlLauncherPage()),
-            MateriBelajar(judul: "Web View", layar: webView()),
-          ],
+      home: WillPopScope(
+        onWillPop: () async {
+          return false;
+        },
+        child: Scaffold(
+          appBar: AppBar(
+            backgroundColor: Colors.teal,
+            title: Text("TUTORIAL FLUTTER"),
+            centerTitle: true,
+            actions: [
+              IconButton(onPressed: () {}, icon: Icon(Icons.account_balance))
+            ],
+          ),
+          body: ListView(
+            children: [
+              MateriBelajar(
+                  judul: "Belajar Fluter Dasar", layar: UrlLauncherPage()),
+              MateriBelajar(
+                  judul: "Url Launcher (link, sms, telp,email",
+                  layar: UrlLauncherPage()),
+              MateriBelajar(judul: "Web View", layar: webView()),
+            ],
+          ),
         ),
       ),
     );

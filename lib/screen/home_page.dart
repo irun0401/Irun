@@ -1,8 +1,12 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:irun/screen/screen1.dart';
 import 'package:irun/screen/screen2.dart';
-import 'package:irun/tutorial_flutter/tutorialflutter.dart';
+import 'package:irun/screen/screen3.dart';
+import 'package:irun/screen/screen4.dart';
+import 'package:irun/screen/screen5.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 
 class HomePage extends StatelessWidget {
@@ -20,7 +24,9 @@ class HomePage extends StatelessWidget {
           pages: [
             Screen1(),
             Screen2(),
-            TutorialFlutter(),
+            Screen3(),
+            Screen4(),
+            Screen5(),
           ],
           // enableLoop: true,
           // enableSideReveal: true,
