@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 import 'screen/screen1.dart';
 import 'screen/screen2.dart';
-import 'screen/screen3.dart';
 import 'screen/screen4.dart';
 import 'screen/screen5.dart';
 // import 'screen/screen6.dart';
@@ -12,7 +11,6 @@ import 'screen/screen5.dart';
 List<Widget> screens = [
   Screen1(),
   Screen2(),
-  Screen3(),
   Screen4(),
   Screen5(),
   // TutorialFlutter(),
