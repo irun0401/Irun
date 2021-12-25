@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:irun/widgets/exit_popup.dart';
+import 'package:irun/widgets/my_convex_bottom.dart';
 
 class Screen3 extends StatelessWidget {
   @override
@@ -7,7 +8,9 @@ class Screen3 extends StatelessWidget {
     return WillPopScope(
       onWillPop: () => showExitPopup(context),
       child: Scaffold(
+        extendBody: true,
         backgroundColor: Colors.white,
+        bottomNavigationBar: MyConvexBottom(),
         body: Center(
           child: Text(
             "Screen 3",

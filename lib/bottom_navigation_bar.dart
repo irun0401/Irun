@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:liquid_swipe/liquid_swipe.dart';
 import 'screen/screen1.dart';
 import 'screen/screen2.dart';
 import 'screen/screen3.dart';
@@ -294,10 +295,16 @@ class LiquidTabBarState extends State<LiquidTabBar>
       body: Stack(
         alignment: Alignment.bottomCenter,
         children: [
-          PageView(
-            children: screens,
-            onPageChanged: onPageChanged,
-            controller: pageCon,
+          Builder(
+            builder: (context) => LiquidSwipe(pages: screens),
+
+            // {
+            //   return PageView(
+            //     children: ,
+            //     onPageChanged: onPageChanged,
+            //     controller: pageCon,
+            //   );
+            // }
           ),
           IgnorePointer(
             ignoring: true,

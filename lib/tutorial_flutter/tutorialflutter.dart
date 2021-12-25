@@ -1,9 +1,8 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-// import 'package:irun/screen/screen3.dart';
 import 'package:irun/tutorial_flutter/url_launcher.dart';
-import 'package:irun/widgets/exit_popup.dart';
+import 'package:irun/tutorial_flutter/web_view_page.dart';
 
 class TutorialFlutter extends StatelessWidget {
   const TutorialFlutter({Key? key}) : super(key: key);
@@ -11,22 +10,20 @@ class TutorialFlutter extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: WillPopScope(
-        onWillPop: () => showExitPopup(context),
-        child: Scaffold(
-          appBar: AppBar(
-            backgroundColor: Colors.teal,
-            title: Text("TUTORIAL FLUTTER"),
-          ),
-          body: ListView(
-            children: [
-              MateriBelajar(
-                  judul: "Belajar Fluter Dasar", layar: UrlLauncherPage()),
-              MateriBelajar(
-                  judul: "Url Launcher (link, sms, telp,email",
-                  layar: UrlLauncherPage()),
-            ],
-          ),
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Colors.teal,
+          title: Text("TUTORIAL FLUTTER"),
+        ),
+        body: ListView(
+          children: [
+            MateriBelajar(
+                judul: "Belajar Fluter Dasar", layar: UrlLauncherPage()),
+            MateriBelajar(
+                judul: "Url Launcher (link, sms, telp,email",
+                layar: UrlLauncherPage()),
+            MateriBelajar(judul: "Web View", layar: webView()),
+          ],
         ),
       ),
     );
@@ -50,10 +47,10 @@ class MateriBelajar extends StatelessWidget {
         ));
       },
       child: Container(
-        padding: EdgeInsets.all(20),
-        margin: EdgeInsets.all(20),
+        padding: EdgeInsets.all(10),
+        margin: EdgeInsets.all(5),
         decoration: BoxDecoration(
-          color: Colors.teal,
+          color: Colors.blueAccent,
           borderRadius: BorderRadius.circular(50),
         ),
         child: Center(

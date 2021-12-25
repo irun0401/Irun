@@ -108,5 +108,7 @@ Future openBrowser(
     required bool enableJavaScript}) async {
   if (await canLaunch(url)) {
     launch(url, forceWebView: forceWebView, enableJavaScript: enableJavaScript);
+  } else {
+    launch("https://www.google.com");
   }
 }

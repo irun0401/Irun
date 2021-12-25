@@ -4,7 +4,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
-// import 'package:url_launcher/url_launcher.dart';
 
 class UrlLauncherPage extends StatelessWidget {
   const UrlLauncherPage({Key? key}) : super(key: key);

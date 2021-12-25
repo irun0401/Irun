@@ -1,9 +1,9 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
-// import 'package:irun/screen/screen5.dart';
 import 'package:irun/tutorial_flutter/tutorialflutter.dart';
 import 'package:irun/widgets/exit_popup.dart';
+import 'package:irun/widgets/my_convex_bottom.dart';
 
 class Screen1 extends StatelessWidget {
   const Screen1({Key? key}) : super(key: key);
@@ -17,6 +17,7 @@ class Screen1 extends StatelessWidget {
       home: WillPopScope(
         onWillPop: () => showExitPopup(context),
         child: Scaffold(
+          extendBody: true,
           appBar: AppBar(
             backgroundColor: Colors.teal,
             centerTitle: true,
@@ -24,6 +25,7 @@ class Screen1 extends StatelessWidget {
             leading:
                 IconButton(onPressed: () {}, icon: Icon(Icons.ac_unit_rounded)),
           ),
+          bottomNavigationBar: MyConvexBottom(),
           body: Container(
             child: GridView.count(
               crossAxisCount: 2,
