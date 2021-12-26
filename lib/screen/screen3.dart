@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:irun/tutorial_flutter/tutorialflutter.dart';
-import 'package:irun/widgets/exit_popup.dart';
 
 class Screen3 extends StatelessWidget {
   @override
@@ -11,91 +10,88 @@ class Screen3 extends StatelessWidget {
       routes: {
         "tutorialFlutter": (context) => TutorialFlutter(),
       },
-      home: WillPopScope(
-        onWillPop: () => showExitPopup(context),
-        child: Scaffold(
-          appBar: AppBar(
-            title: Text('LEARN PROGRAMMING'),
-            actions: [
-              IconButton(onPressed: () {}, icon: Icon(Icons.accessibility))
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('LEARN PROGRAMMING'),
+          actions: [
+            IconButton(onPressed: () {}, icon: Icon(Icons.accessibility))
+          ],
+        ),
+        body: Container(
+          padding: EdgeInsets.only(top: 0, bottom: 70, left: 30, right: 30),
+          child: GridView.count(
+            crossAxisCount: 2,
+            children: [
+              MyMenu(
+                halaman: "tutorialFlutter",
+                urlsrc:
+                    "https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png",
+                title: "HOME",
+                warna: Colors.blue,
+              ),
+              MyMenu(
+                halaman: "tutorialFlutter",
+                urlsrc:
+                    "https://www.eudeka.id/wp-content/uploads/2021/04/flutter-logo-sharing-1.png",
+                title: "HOME",
+                warna: Colors.blue,
+              ),
+              MyMenu(
+                halaman: "tutorialFlutter",
+                urlsrc:
+                    "https://plumbr.io/app/uploads/blog-image/observations-about-shenandoah-1.png",
+                title: "HOME",
+                warna: Colors.blue,
+              ),
+              MyMenu(
+                halaman: "tutorialFlutter",
+                urlsrc: "https://pngimg.com/uploads/php/php_PNG29.png",
+                title: "HOME",
+                warna: Colors.blue,
+              ),
+              MyMenu(
+                halaman: "tutorialFlutter",
+                urlsrc:
+                    "https://img.favpng.com/10/23/21/c-programming-language-icon-png-favpng-878WK0RF2zxn7b6TimT7zquZN.jpg",
+                title: "HOME",
+                warna: Colors.blue,
+              ),
+              MyMenu(
+                halaman: "tutorialFlutter",
+                urlsrc:
+                    "https://img.favpng.com/17/10/23/the-c-programming-language-computer-programming-png-favpng-y9Cye5Z4PcdzLK9aYYK1izU4q.jpg",
+                title: "HOME",
+                warna: Colors.blue,
+              ),
+              MyMenu(
+                halaman: "tutorialFlutter",
+                urlsrc:
+                    "https://cdn.icon-icons.com/icons2/1488/PNG/512/5352-html5_102567.png",
+                title: "HOME",
+                warna: Colors.blue,
+              ),
+              MyMenu(
+                halaman: "tutorialFlutter",
+                urlsrc:
+                    "https://cdn.icon-icons.com/icons2/1826/PNG/512/4202020css3htmllogosocialsocialmedia-115668_115633.png",
+                title: "HOME",
+                warna: Colors.blue,
+              ),
+              MyMenu(
+                halaman: "tutorialFlutter",
+                urlsrc:
+                    "https://www.offlineinstallerapps.com/wp-content/uploads/2017/08/download-1.png",
+                title: "HOME",
+                warna: Colors.blue,
+              ),
+              MyMenu(
+                halaman: "tutorialFlutter",
+                urlsrc:
+                    "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin_Icon.png/600px-Kotlin_Icon.png",
+                title: "HOME",
+                warna: Colors.blue,
+              ),
             ],
-          ),
-          body: Container(
-            padding: EdgeInsets.only(top: 0, bottom: 70, left: 30, right: 30),
-            child: GridView.count(
-              crossAxisCount: 2,
-              children: [
-                MyMenu(
-                  halaman: "tutorialFlutter",
-                  urlsrc:
-                      "https://upload.wikimedia.org/wikipedia/commons/7/7e/Dart-logo.png",
-                  title: "HOME",
-                  warna: Colors.blue,
-                ),
-                MyMenu(
-                  halaman: "tutorialFlutter",
-                  urlsrc:
-                      "https://www.eudeka.id/wp-content/uploads/2021/04/flutter-logo-sharing-1.png",
-                  title: "HOME",
-                  warna: Colors.blue,
-                ),
-                MyMenu(
-                  halaman: "tutorialFlutter",
-                  urlsrc:
-                      "https://plumbr.io/app/uploads/blog-image/observations-about-shenandoah-1.png",
-                  title: "HOME",
-                  warna: Colors.blue,
-                ),
-                MyMenu(
-                  halaman: "tutorialFlutter",
-                  urlsrc: "https://pngimg.com/uploads/php/php_PNG29.png",
-                  title: "HOME",
-                  warna: Colors.blue,
-                ),
-                MyMenu(
-                  halaman: "tutorialFlutter",
-                  urlsrc:
-                      "https://img.favpng.com/10/23/21/c-programming-language-icon-png-favpng-878WK0RF2zxn7b6TimT7zquZN.jpg",
-                  title: "HOME",
-                  warna: Colors.blue,
-                ),
-                MyMenu(
-                  halaman: "tutorialFlutter",
-                  urlsrc:
-                      "https://img.favpng.com/17/10/23/the-c-programming-language-computer-programming-png-favpng-y9Cye5Z4PcdzLK9aYYK1izU4q.jpg",
-                  title: "HOME",
-                  warna: Colors.blue,
-                ),
-                MyMenu(
-                  halaman: "tutorialFlutter",
-                  urlsrc:
-                      "https://cdn.icon-icons.com/icons2/1488/PNG/512/5352-html5_102567.png",
-                  title: "HOME",
-                  warna: Colors.blue,
-                ),
-                MyMenu(
-                  halaman: "tutorialFlutter",
-                  urlsrc:
-                      "https://cdn.icon-icons.com/icons2/1826/PNG/512/4202020css3htmllogosocialsocialmedia-115668_115633.png",
-                  title: "HOME",
-                  warna: Colors.blue,
-                ),
-                MyMenu(
-                  halaman: "tutorialFlutter",
-                  urlsrc:
-                      "https://www.offlineinstallerapps.com/wp-content/uploads/2017/08/download-1.png",
-                  title: "HOME",
-                  warna: Colors.blue,
-                ),
-                MyMenu(
-                  halaman: "tutorialFlutter",
-                  urlsrc:
-                      "https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Kotlin_Icon.png/600px-Kotlin_Icon.png",
-                  title: "HOME",
-                  warna: Colors.blue,
-                ),
-              ],
-            ),
           ),
         ),
       ),

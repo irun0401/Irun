@@ -7,6 +7,7 @@ import 'package:irun/screen/screen2.dart';
 import 'package:irun/screen/screen3.dart';
 import 'package:irun/screen/screen4.dart';
 import 'package:irun/screen/screen5.dart';
+import 'package:irun/widgets/exit_popup.dart';
 import 'package:liquid_swipe/liquid_swipe.dart';
 
 class HomePage extends StatelessWidget {
@@ -14,23 +15,28 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      // extendBody: true,
-      // appBar: AppBar(
-      // title: Text("IRUN UZUMAKI"),
-      // ),
-      body: Builder(
-        builder: (context) => LiquidSwipe(
-          pages: [
-            Screen1(),
-            Screen2(),
-            Screen3(),
-            Screen4(),
-            Screen5(),
-          ],
-          // enableLoop: true,
-          // enableSideReveal: true,
-          // slideIconWidget: Icon(Icons.arrow_back),
+    return WillPopScope(
+      onWillPop: () => showExitPopup(context),
+      child: Scaffold(
+        // extendBody: true,
+        // appBar: AppBar(
+        // title: Text("IRUN UZUMAKI"),
+        // ),
+        body: Builder(
+          builder: (context) => LiquidSwipe(
+            // enableSideReveal: true,
+            // enableLoop: true,
+            pages: [
+              Screen1(),
+              Screen2(),
+              Screen3(),
+              Screen4(),
+              Screen5(),
+            ],
+            // enableLoop: true,
+            // enableSideReveal: true,
+            // slideIconWidget: Icon(Icons.arrow_back),
+          ),
         ),
       ),
     );
